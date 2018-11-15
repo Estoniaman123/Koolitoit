@@ -8,6 +8,8 @@ $green: #B0E8E2;
 $orange: #EB8B6E;
 
 body {
+margin-left: -8px;
+margin-top: -8px;
 }
 
 .container {
