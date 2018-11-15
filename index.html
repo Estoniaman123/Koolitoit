@@ -2,6 +2,9 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery.paroller.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <link href="style.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,9 +16,7 @@
     </a>
     <span>Menüü</span>
   </div>
-  
-    
-    
+   
   <div class="header">
     <div class="color-overlay">
       <div class="day-number" id="daynumber">15</div>
@@ -25,7 +26,6 @@
       </div>
     </div>
   </div>
-<p id="demo"></p>
 <script>
 var d = new Date();
 var weekday = new Array(7);
@@ -51,7 +51,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
     
   <div class="timeline">
     <ul>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet pink"></div>
         <div class="time">16. november<br>reede</div>
         <div class="desc">
@@ -59,7 +59,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
           <h4>Koolipiim, puuvili, leib, sai</h4>
         </div>
       </li>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet green"></div>
         <div class="time">19. november<br>esmaspäev</div>
         <div class="desc">
@@ -67,7 +67,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
           <h4>Tarretis, koolipiim, leib, sai</h4>
         </div>
       </li>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet orange"></div>
         <div class="time">20. november<br>teisipäev</div>
         <div class="desc">
@@ -75,7 +75,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
           <h4>Koolipiim, leib, sai</h4>
         </div>
       </li>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet pink"></div>
         <div class="time">21. november<br>kolmapäev</div>
         <div class="desc">
@@ -83,7 +83,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
           <h4>Koolipiim, leib, sai</h4>
         </div>
       </li>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet green"></div>
         <div class="time">22. november<br>neljapäev</div>
         <div class="desc">
@@ -91,7 +91,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
           <h4>Piimakissell moosiga, koolipiim, leib, sai</h4>
         </div>
       </li>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet orange"></div>
         <div class="time">23. november<br>reede</div>
         <div class="desc">
@@ -99,7 +99,7 @@ document.getElementById("daynumber").innerHTML = d.getDate();
           <h4>Puuvili, koolipiim, leib, sai</h4>
         </div>
       </li>
-      <li>
+      <li data-aos="fade-right">
         <div class="bullet pink"></div>
         <div class="time">26. november<br>esmaspäev</div>
         <div class="desc">
@@ -110,6 +110,8 @@ document.getElementById("daynumber").innerHTML = d.getDate();
     </ul>
   </div>  
 </div>
-
+<script>
+ AOS.init();
+</script>
 </body>
 </html>
