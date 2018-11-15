@@ -7,6 +7,11 @@ $pink: #F93B69;
 $green: #B0E8E2;
 $orange: #EB8B6E;
 
+body {
+  font-family: "Open Sans", sans-serif
+}
+
+
 .container {
   max-width: 700px;
   max-height: 1000px;
@@ -116,6 +121,7 @@ $orange: #EB8B6E;
   margin: 1em 0;
   vertical-align: top;
 }
+
 .timeline .bullet {
   width: 1em;
   height: 1em;

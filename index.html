@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="style.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,16 +14,41 @@
     <span>Menüü</span>
   </div>
   
+    
+    
   <div class="header">
     <div class="color-overlay">
-      <div class="day-number">15</div>
+      <div class="day-number" id="daynumber">15</div>
       <div class="date-right">
-        <div class="day-name">Neljapäev</div>
-        <div class="month">November 2018</div>
+        <div class="day-name" id="day">Päev</div>
+        <div class="month" id="month">Kuu + Aasta</div>
       </div>
     </div>
   </div>
-  
+<p id="demo"></p>
+<script>
+var d = new Date();
+var weekday = new Array(7);
+weekday[0] =  "Pühapäev";
+weekday[1] = "Esmaspäev";
+weekday[2] = "Teisipäev";
+weekday[3] = "Kolmapäev";
+weekday[4] = "Neljapäev";
+weekday[5] = "Reede";
+weekday[6] = "Laupäev";
+
+var n = weekday[d.getDay()];
+document.getElementById("day").innerHTML = n;
+
+var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+document.getElementById("month").innerHTML = months[d.getMonth()]+ ' ' +d.getFullYear();;
+
+document.getElementById("daynumber").innerHTML = d.getDate();
+
+
+</script>
+
+    
   <div class="timeline">
     <ul>
       <li>
@@ -71,6 +97,14 @@
         <div class="desc">
           <h3>Grillvorst, mulgipuder, kaste, tomati-kurgisalat</h3>
           <h4>Puuvili, koolipiim, leib, sai</h4>
+        </div>
+      </li>
+      <li>
+        <div class="bullet pink"></div>
+        <div class="time">26. november<br>esmaspäev</div>
+        <div class="desc">
+          <h3>Pelmeenisupp</h3>
+          <h4>Kohuke, leib, sai</h4>
         </div>
       </li>
     </ul>
